@@ -53,7 +53,7 @@
                           VALUES (
                             '$facs', '$dates','$dists','$lnames','$snames','$ages','$agc','$gridRadios','$dias1','$dias2','$sur1','$sur2','$nams',$phones,$phonez,'$fstat')";
      if (mysqli_query($con, $sql)) {
-      echo "$facs, $dates,$dists,$lnames,$snames,$ages,$agc,$gridRadios,$dias1,$dias2, $sur1,$sur2,$nams,$phones,$phonez,$fstat";
+      echo "Patient added, add another?";
       header("Location: surgery.php?"); 
 
      } else {

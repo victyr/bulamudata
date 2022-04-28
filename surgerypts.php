@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
 
 
 <head>
+
     <meta charset="utf-8">
     <title>Update Angel Patient</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -90,51 +92,59 @@
             <!-- Navbar End -->
             
             <!-- Table Start -->
+           
+    
             <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-12">
+            <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">All patients</h6>
+                            <h6 class="mb-4">Responsive Table</h6>
                             <div class="table-responsive">
                                 <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Age</th>
-                                            <th scope="col">Sex</th>
-                                            <th scope="col">Condition</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>jhon@email.com</td>
-                                            <td>USA</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>mark@email.com</td>
-                                            <td>UK</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>jacob@email.com</td>
-                                            <td>AU</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Surgery done</th>
+                                        <th scope="col">Final Status</th>
+                                        <th scope="col">Phone 1</th>
+                                        <th scope="col">Phone 2</th>
+                                        
+                                    </tr>
+                                </thead>           
+                                <tbody>
+                                <?php
+                                $con = mysqli_connect("localhost", "root", "", "bulamudb");
+                                $sql="SELECT id,sname,fname,surd,fstatus,cont,contt FROM intensive";
+                                $res=mysqli_query($con,$sql);
+                               ?>
+                               
+                                  
+                               
+                                   <?php
+                                   while($rows=mysqli_fetch_array($res)){
+                                    ?>
+
+                                     <tr>
+                                      <th scope="row" ><?php echo $rows['id'];?></th>
+                                      <td> <?php echo $rows['sname'];?></td>
+                                      <td> <?php echo $rows['fname'];?></td>
+                                      <td> <?php echo $rows['surd'];?></td>
+                                      <td> <?php echo $rows['fstatus'];?></td>
+                                      <td> <?php echo $rows['cont'];?><t/d>
+                                      <td> <?php echo $rows['contt'];?></td>
+
+                                   </tr>
+                                <?php
+                                   }
+                                   ?>
+                                   </tbody>
+                            </table>
+                          </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            
             <!-- Table End -->
 
 
@@ -148,7 +158,7 @@
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                            Designed By <a href="https://">HTML Codex</a>
                         </div>
                     </div>
                 </div>

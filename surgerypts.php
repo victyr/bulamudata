@@ -97,12 +97,12 @@
             <div class="container-fluid pt-4 px-4">
             <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Responsive Table</h6>
+                            <h6 class="mb-4">Surgery Intensive patients</h6>
                             <div class="table-responsive">
                                 <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
+                                        <th scope="col">No.</th>
                                         <th scope="col">First Name</th>
                                         <th scope="col">Last Name</th>
                                         <th scope="col">Surgery done</th>
@@ -115,18 +115,19 @@
                                 <tbody>
                                 <?php
                                 $con = mysqli_connect("localhost", "root", "", "bulamudb");
-                                $sql="SELECT id,sname,fname,surd,fstatus,cont,contt FROM intensive";
+                                $sql="SELECT sname,fname,surd,fstatus,cont,contt FROM intensive";
                                 $res=mysqli_query($con,$sql);
                                ?>
                                
                                   
                                
                                    <?php
+                                     $i=1;
                                    while($rows=mysqli_fetch_array($res)){
                                     ?>
 
                                      <tr>
-                                      <th scope="row" ><?php echo $rows['id'];?></th>
+                                      <th scope="row"><?php echo $i++;?></th>
                                       <td> <?php echo $rows['sname'];?></td>
                                       <td> <?php echo $rows['fname'];?></td>
                                       <td> <?php echo $rows['surd'];?></td>

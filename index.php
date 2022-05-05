@@ -106,7 +106,7 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-bar fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">CST</p>
+                                <p class="mb-2">Clinical Support Team</p>
                                 <h6 class="mb-0">1234</h6>
                             </div>
                         </div>
@@ -115,8 +115,21 @@
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <i class="fa fa-chart-area fa-3x text-primary"></i>
                             <div class="ms-3">
-                                <p class="mb-2">SI</p>
-                                <h6 class="mb-0">1234</h6>
+                                <p class="mb-2">Surgery Intensive</p>
+                                <?php
+                                
+                                $con = mysqli_connect("localhost", "root", "", "bulamudb");
+                                $sql="SELECT count(sname) As total FROM intensive";
+                                $res=mysqli_query($con,$sql);  
+                                $value =mysqli_fetch_assoc($res);   
+                                $numrows = $value['total'];                     
+                                ?>
+                                <h6 class="mb-0">
+                                   <?php
+                                   echo $numrows;
+                                   
+                                ?>
+                                </h6>
                             </div>
                         </div>
                     </div>

@@ -55,7 +55,9 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Angel Program</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="formpts.php" class="dropdown-item" onclick="myFunction()">Admin</a> 
+                        <a href="angelpts.php" class="dropdown-item">add variables</a>
+                            <a href="formpts.php" class="dropdown-item">register angel patient</a>
+                            <a href="angelpts.php" class="dropdown-item">update patient</a>  
                         </div>
                     </div>
                     <div class="nav-item dropdown">

@@ -64,7 +64,7 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>HCE program</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="hcedis.php" class="dropdown-item">District and facilities</a>
-                            <a href="ess.php" class="dropdown-item">Ess program</a>
+            
                             <a href="et.php" class="dropdown-item">ET program</a>
                         </div>
                     </div>
@@ -101,11 +101,11 @@
 
                                 <div class="mb-3">
                                     <label for="district" class="form-label">District</label>
-                                    <input  class="form-control" name="dise">
+                                    <input  class="form-control" name="dise" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label  class="form-label" required>Healthcare</label>
-                                    <input  class="form-control" name="hce1">
+                                    <label  class="form-label">Healthcare</label>
+                                    <input  class="form-control" name="hce1" required>
                                 </div>
                                 <div class="mb-3">
                                     <label  class="form-label">Healthcare</label>

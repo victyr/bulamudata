@@ -129,30 +129,29 @@
                                   <div class="row mb-3">
                                     <label class="col-sm-3 col-form-label" for ="secs">C-section</label>
                                     <div class="col-sm-3">
-                                        <input  name="csec" style="width:50px">
+                                        <input  name="csec" style="width:50px" required>
                                     </div>
                                     <label class="col-sm-4 col-form-label">Other surgeries</label>
                                     <div class="col-sm-2">
-                                        <input  name="csec" style="width:50px">
+                                        <input  name="csec" style="width:50px" required>
                                     </div>
                                     <label class="col-sm-3 col-form-label" for ="secs">Referral in</label>
                                     <div class="col-sm-3">
-                                        <input  name="csec" style="width:50px">
+                                        <input  name="csec" style="width:50px" required>
                                     </div>
                                     <label class="col-sm-4 col-form-label">Referrals out</label>
                                     <div class="col-sm-2">
-                                        <input  name="csec" style="width:50px">
+                                        <input  name="csec" style="width:50px" required>
                                     </div>
                                     <div class="form-floating">
                                 <textarea class="form-control" placeholder="Leave a comment here"
                                     id="floatingTextarea" style="height: 150px;"></textarea>
                                 <label for="floatingTextarea">Comments</label>
                             </div>
-                               <div class="m-n2">
-                                <button class="btn btn-primary w-100 m-2" type="button">Button</button>
-                               </div>
-                               
-                        
+                            <div class="m-n2">
+                                
+                                <button class="btn btn-primary w-100 m-2" type="submit" name="ess">Save</button>
+                            </div>
                             </form>
                         </div>
                     </div>

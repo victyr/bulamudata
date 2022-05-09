@@ -62,7 +62,6 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>HCE program</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="hcedis.php" class="dropdown-item">District and facilities</a>
-                            <a href="ess.php" class="dropdown-item">Ess program</a>
                             <a href="et.php" class="dropdown-item">ET program</a>
                         </div>
                     </div>

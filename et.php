@@ -62,7 +62,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>HCE program</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="ess.php" class="dropdown-item">Ess program</a>
+                            <a href="hcedis.php" class="dropdown-item">District and facilities</a>
                             <a href="et.php" class="dropdown-item">ET program</a>
                         </div>
                     </div>
@@ -91,54 +91,68 @@
             <!-- Navbar End -->
 
        <div class="container-fluid pt-4 px-4">
-          <div class="row g-4">
+                <div class="row g-4">
             <div class="col-sm-12 col-xl-6">
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">ESS and ESS submission form</h6>
                             <form>
-                                <div class="row mb-3">
-                                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                                    <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail3">
+                                    <label for="district" class="col-sm-3 col-form-label">District</label>
+                                    <select for="district" name= "district">
+                                    <option value="Years" >Bunyangabu</option>
+                                    <option value="Months" >Kyegegwa</option>
+                                    <option value="Weeks" >Budaka</option>
+                                    <option value="Days" >Namutumba</option>
+                                    </select><br></br>
+                                    
+                                    <label for ="district" class="col-sm-3 col-form-label">Period</label>
+                                    <select for="district" name="period">
+                                    <option  value="jan">January</option>
+                                    <option  value="feb">February</option>
+                                    <option  value="mar">March</option>
+                                    <option  value="april">April</option>
+                                    <option  value="may">May</option>
+                                    <option  value="jun">June</option>
+                                    <option  value="july">July</option>
+                                    <option  value="aug">August</option>
+                                    <option  value="sept">September</option>
+                                    <option  value="oct">October</option>
+                                    <option  value="nov">November</option>
+                                    <option  value="dec">December</option>
+                                    </select>
+                                    <select for="district" name="period">
+                                    <option  value="jan">2021</option>
+                                    <option  value="feb">2022</option>
+                                    <option  value="mar">2023</option>
+                                    <option  value="april">2024</option>
+                                    <option  value="may">2025</option>
+                                    </select><br></br>
+                                  <div class="row mb-3">
+                                    <label class="col-sm-3 col-form-label" for ="secs">C-section</label>
+                                    <div class="col-sm-3">
+                                        <input  name="csec" style="width:50px">
                                     </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                                    <div class="col-sm-10">
-                                        <input type="password" class="form-control" id="inputPassword3">
+                                    <label class="col-sm-4 col-form-label">Other surgeries</label>
+                                    <div class="col-sm-2">
+                                        <input  name="csec" style="width:50px">
                                     </div>
-                                </div>
-                                <fieldset class="row mb-3">
-                                    <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios1" value="option1" checked>
-                                            <label class="form-check-label" for="gridRadios1">
-                                                First radio
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
-                                                Second radio
-                                            </label>
-                                        </div>
+                                    <label class="col-sm-3 col-form-label" for ="secs">Referral in</label>
+                                    <div class="col-sm-3">
+                                        <input  name="csec" style="width:50px">
                                     </div>
-                                </fieldset>
-                                <div class="row mb-3">
-                                    <legend class="col-form-label col-sm-2 pt-0">Checkbox</legend>
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                            <label class="form-check-label" for="gridCheck1">
-                                                Check me out
-                                            </label>
-                                        </div>
+                                    <label class="col-sm-4 col-form-label">Referrals out</label>
+                                    <div class="col-sm-2">
+                                        <input  name="csec" style="width:50px">
                                     </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Sign in</button>
+                                    <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here"
+                                    id="floatingTextarea" style="height: 150px;"></textarea>
+                                <label for="floatingTextarea">Comments</label>
+                            </div>
+                               <div class="m-n2">
+                                <button class="btn btn-primary w-100 m-2" type="button">Button</button>
+                               </div>
+                               
+                        
                             </form>
                         </div>
                     </div>

@@ -63,4 +63,32 @@
      mysqli_close($con);
     
     }
+
+    if(isset($_POST['insertd'])){
+
+      $dise = $_POST['dise'];
+      $hcee1= $_POST['hce1'];
+      $hcee2= $_POST['hce2'];
+      $hcee3= $_POST['hce3'];
+     
+    $dise = mysqli_real_escape_string($con, $dise);  
+    $hcee1 = mysqli_real_escape_string($con, $hcee1);
+    $hcee2 = mysqli_real_escape_string($con, $hcee2);  
+    $hcee3 = mysqli_real_escape_string($con, $hcee3);
+
+    
+   
+
+
+    }
+   
+
+
+
+
+
+
+
+
+
 ?>

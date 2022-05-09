@@ -1,15 +1,15 @@
+
+
+
 <!DOCTYPE html>
-
 <html lang="en">
-
 
 <head>
     <meta charset="utf-8">
-    <title>Update Angel Patient</title>
+    <title>Bulamu Programs</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-    <script type="text/javascript" scr="js/fetchData.js"></script>
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -44,27 +44,27 @@
         </div>
         <!-- Spinner End -->
 
-
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
-                    <h4 class="text-primary"></i>Update a patient</h4>
+                    <h3 class="text-primary"></i>All programs</h3>
                 </a>
                 
                 <div class="navbar-nav w-100">
                     <a href="index.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Angel program</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Acute care</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="formpts.php" class="dropdown-item">register angel patient</a>
-                            <a href="angelpts.php" class="dropdown-item">update patient</a>  
+                            <a href="angel.php" class="dropdown-item">Angel Program</a>
+                            <a href="surgerypts.php" class="dropdown-item">Surgical Intensive</a>  
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>HCE program</a>
                         <div class="dropdown-menu bg-transparent border-0">
-
+                            <a href="hcedis.php" class="dropdown-item">District and facilities</a>
+                            <a href="ess.php" class="dropdown-item">Ess program</a>
                             <a href="et.php" class="dropdown-item">ET program</a>
                         </div>
                     </div>
@@ -76,6 +76,7 @@
         <!-- Sidebar End -->
 
 
+
         <!-- Content Start -->
         <div class="content">
             <!-- Navbar Start -->
@@ -85,67 +86,47 @@
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
-                </a> 
+                </a>
+                
                 
             </nav>
             <!-- Navbar End -->
-            
-            <!-- Table Start -->
+
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
-                    <div class="col-12">
+                    <div class="col-sm-12 col-xl-6">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Responsive Table</h6>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First Name</th>
-                                            <th scope="col">Last Name</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Country</th>
-                                            <th scope="col">ZIP</th>
-                                            <th scope="col">Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>jhon@email.com</td>
-                                            <td>USA</td>
-                                            <td>123</td>
-                                            <td>Member</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>mark@email.com</td>
-                                            <td>UK</td>
-                                            <td>456</td>
-                                            <td>Member</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>jacob@email.com</td>
-                                            <td>AU</td>
-                                            <td>789</td>
-                                            <td>Member</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <h6 class="mb-4">Udpate District and facilties</h6>
+                            <form action="post.php" method="post">
+
+                                <div class="mb-3">
+                                    <label for="district" class="form-label">District</label>
+                                    <input  class="form-control" name="dise">
+                                </div>
+                                <div class="mb-3">
+                                    <label  class="form-label" required>Healthcare</label>
+                                    <input  class="form-control" name="hce1">
+                                </div>
+                                <div class="mb-3">
+                                    <label  class="form-label">Healthcare</label>
+                                    <input  class="form-control" name="hce2">
+                                </div>
+                                <div class="mb-3">
+                                    <label  class="form-label">Healthcare</label>
+                                    <input  class="form-control" name="hce3">
+                                </div>
+                                <div class="m-n2">
+                                
+                                <button class="btn btn-primary w-100 m-2" type="submit" name="insertd">Save</button>
                             </div>
+                            </form>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- Table End -->
+            
 
+
+            
+            
 
 
             <!-- Footer Start -->
@@ -153,12 +134,9 @@
                 <div class="bg-light rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
+                            &copy; <a href="#">Bulamu healthcare</a>, All Right Reserved. 
                         </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

@@ -234,6 +234,7 @@
                                 <div class="mb-3">
                                     <label class="form-label">Surgery status</label>
                                     <select class="form-select mb-3" aria-label="Default select example">
+                                    <option value=""></option>
                                     <option value="1">Done</option>
                                     <option value="2">waiting</option>
                                     <option value="3">Not needed</option>
@@ -246,6 +247,7 @@
                                 <div class="mb-3">
                                     <label class="form-label">Funding Category</label>
                                     <select class="form-select mb-3" aria-label="Default select example">
+                                    <option value=""></option>
                                     <option value="1">Fully</option>
                                     <option value="2">Partial</option>
                                     <option value="3">Advocacy</option>

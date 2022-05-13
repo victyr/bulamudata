@@ -136,7 +136,7 @@
                                 <label for="phone">phone number1:</label>
                                 <input class="form-control mb-3" type="tel" id="phone" name="phone"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
                                 <label for="phone">phone number2:</label>
-                                <input class="form-control mb-3" type="tel" id="phone" name="phone"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+                                <input class="form-control mb-3" type="tel" id="phone" name="phone"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                                 
                             </div>
                             
@@ -205,22 +205,26 @@
                                </select>
                                <h6 class="mb-4">Final Section</h6>
                                 <label for="start">Admission date:</label>
-                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="2022-04-20">
+                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="">
                                 <label for="start">Discharge date:</label>
-                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="2022-04-20">
+                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="">
 
                                 </div>
                                 
                                 <div class="mb-3">
                                     <label class="form-label">Final status</label>
                                     <select class="form-select mb-3" aria-label="Default select example">
+                                    <option value=""></option>
                                     <option value="1">Alive</option>
                                     <option value="2">Dead</option>
                                     <option value="3">Advocacy</option>
                                     </select>
                                 </div>
  
-                            
+                                <div class="m-n2">
+                                
+                                <button class="btn btn-primary w-100 m-2" type="submit" name="ess">Save</button>
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-xl-6">
@@ -264,6 +268,7 @@
                                  ?>
                                
                                  <select class="form-select mb-3" aria-label="Default select example">
+                                 <option value=""></option>
                                    <?php
                                    while($rows=mysqli_fetch_array($res)){
                                        ?>

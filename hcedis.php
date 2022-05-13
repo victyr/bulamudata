@@ -101,20 +101,14 @@
 
                                 <div class="mb-3">
                                     <label for="district" class="form-label">District</label>
-                                    <input  class="form-control" name="dise" required>
+                                    <input  class="form-control" name="dise" required>      
+
                                 </div>
                                 <div class="mb-3">
                                     <label  class="form-label">Healthcare</label>
                                     <input  class="form-control" name="hce1" required>
                                 </div>
-                                <div class="mb-3">
-                                    <label  class="form-label">Healthcare</label>
-                                    <input  class="form-control" name="hce2">
-                                </div>
-                                <div class="mb-3">
-                                    <label  class="form-label">Healthcare</label>
-                                    <input  class="form-control" name="hce3">
-                                </div>
+                                
                                 <div class="m-n2">
                                 
                                 <button class="btn btn-primary w-100 m-2" type="submit" name="insertd">Save</button>

@@ -68,17 +68,23 @@
 
       $dise = $_POST['dise'];
       $hcee1= $_POST['hce1'];
-      $hcee2= $_POST['hce2'];
-      $hcee3= $_POST['hce3'];
+
      
     $dise = mysqli_real_escape_string($con, $dise);  
     $hcee1 = mysqli_real_escape_string($con, $hcee1);
-    $hcee2 = mysqli_real_escape_string($con, $hcee2);  
-    $hcee3 = mysqli_real_escape_string($con, $hcee3);
 
-    
+    $sql1 = "INSERT INTO hcefac (district,facility) VALUES('$dise','$hcee1')";
    
+    if (mysqli_query($con, $sql1)) {
+      echo "Patient added, add another?";
 
+      header("Location: hcedis.php?"); 
+
+     } else {
+      echo "Error: " . $sql1 . "" . mysqli_error($con);
+     }
+     mysqli_close($con);
+    
 
     }
    

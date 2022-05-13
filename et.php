@@ -96,13 +96,53 @@
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">ESS and ESS submission form</h6>
                             <form>
-                                    <label for="district" class="col-sm-3 col-form-label">District</label>
-                                    <select for="district" name= "district">
-                                    <option value="Years" >Bunyangabu</option>
-                                    <option value="Months" >Kyegegwa</option>
-                                    <option value="Weeks" >Budaka</option>
-                                    <option value="Days" >Namutumba</option>
-                                    </select><br></br>
+                            <div class="mb-3">
+                                 <label for="district">District:</label>
+                                    <?php
+                                 $con = mysqli_connect("localhost", "root", "", "bulamudb");
+                                 $sql="SELECT DISTINCT district FROM hcefac";
+                                 $res=mysqli_query($con,$sql);
+                                 ?>
+                               
+                                 <select for="district" name="hced" required>
+                                   <?php
+                                   while($rows=mysqli_fetch_array($res)){
+                                    
+                                       ?>
+                                       
+                                       
+                                       <option for="district" value="<?php echo $rows['district']; ?>"> <?php echo $rows['district']; ?></option>
+                                       
+                                 <?php
+                                   }
+                                  
+                                   ?>
+
+                                 </select>
+                                
+                                 <label for="district">Facility:</label>
+                                    <?php
+                                
+                                 $con = mysqli_connect("localhost", "root", "", "bulamudb");
+                                 $sql="SELECT facility FROM hcefac";
+                                 $res=mysqli_query($con,$sql);
+                                 ?>
+                               
+                                 <select for="district" name="hcef" required>
+                                   <?php
+                                   while($rows=mysqli_fetch_array($res)){
+                                    
+                                       ?>
+                                       
+                                       
+                                    <option value="<?php echo $rows['facility']; ?>"> <?php echo $rows['facility']; ?></option>
+                                 <?php
+                                   }
+                                   ?>
+
+                                 </select>
+                                </div>
+                            
                                     
                                     <label for ="district" class="col-sm-3 col-form-label">Period</label>
                                     <select for="district" name="period">

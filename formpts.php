@@ -99,7 +99,7 @@
                             <h6 class="mb-4">Edit or add in different fields</h6>
 
                             <label for="start">Registration date:</label>
-                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="2022-04-20">
+                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="">
                             <input class="form-control mb-3" type="text" placeholder="First name"
                                 aria-label="default input example">
                             <input class="form-control mb-3" type="text" placeholder="Second name"
@@ -234,14 +234,14 @@
                                 <div class="mb-3">
                                     <label class="form-label">Surgery status</label>
                                     <select class="form-select mb-3" aria-label="Default select example">
-                                    <option value="1">done</option>
+                                    <option value="1">Done</option>
                                     <option value="2">waiting</option>
                                     <option value="3">Not needed</option>
                                     <option value="4">Treatment</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="2022-04-20">
+                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Funding Category</label>

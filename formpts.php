@@ -91,7 +91,7 @@
             <!-- Navbar End -->
 
             <!-- Form Start -->
-            <form>
+            <form action="post.php" method="post">
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
                     <div class="col-sm-12 col-xl-6">
@@ -99,44 +99,44 @@
                             <h6 class="mb-4">Edit or add in different fields</h6>
 
                             <label for="start">Registration date:</label>
-                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="">
-                            <input class="form-control mb-3" type="text" placeholder="First name"
+                                <input class="form-control mb-3" type="date" id="start" name="date_reg" value="">
+                            <input class="form-control mb-3" name="fnam_ang" type="text" placeholder="First name"
                                 aria-label="default input example">
-                            <input class="form-control mb-3" type="text" placeholder="Second name"
+                            <input class="form-control mb-3" name="snam_ang" type="text" placeholder="Second name"
                                 aria-label="default input example">
                                 <fieldset class="row mb-3">
                                     <legend class="col-form-label col-sm-2 pt-0">Sex</legend>
                                     <div class="col-sm-10">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios1" value="option1">
+                                            <input class="form-check-input" type="radio" name="sex_ang"
+                                                id="gridRadios1" value="Male">
                                             <label class="form-check-label" for="gridRadios1">
                                                 Male
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios2" value="option2">
+                                            <input class="form-check-input" type="radio" name="sex_ang"
+                                                id="gridRadios2" value="Female">
                                             <label class="form-check-label" for="gridRadios2">
                                                 Female
                                             </label>
                                         </div>
                                     </div>
                                 </fieldset>
-                                <input class="form-control mb-3" type="text" placeholder="District"
+                                <input class="form-control mb-3" name="dist_ang"type="text" placeholder="District"
                                 aria-label="default input example">
                                 <label for="age">Age:</label>
-                                <input for="age" type="number" style="width:50px" min="0" max="100" />
-                                <select for="age">
+                                <input for="age" type="number" style="width:50px" min="0" max="100" name="age_a" />
+                                <select for="age" name="age_ang">
                                     <option value="1">Years</option>
                                     <option value="2">Months</option>
                                     <option value="3">Weeks</option>
                                     <option value="4">Days</option>
                                     </select><br></br>
                                 <label for="phone">phone number1:</label>
-                                <input class="form-control mb-3" type="tel" id="phone" name="phone"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+                                <input class="form-control mb-3" name="phon_ang" type="tel" id="phone" name="phone"required>
                                 <label for="phone">phone number2:</label>
-                                <input class="form-control mb-3" type="tel" id="phone" name="phone"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                <input class="form-control mb-3" name="phone_ang" type="tel" id="phone" name="phone">
                                 
                             </div>
                             
@@ -154,7 +154,7 @@
                                  $res=mysqli_query($con,$sql);
                                  ?>
                                
-                                 <select class="form-select mb-3" aria-label="Default select example">
+                                 <select class="form-select mb-3" name="dia_ang1" aria-label="Default select example">
                                    <?php
                                    while($rows=mysqli_fetch_array($res)){
                                        ?>
@@ -173,7 +173,7 @@
                                 $res=mysqli_query($con,$sql);
                                ?>
                                
-                               <select class="form-select mb-3" aria-label="Default select example">
+                               <select class="form-select mb-3" name="dia_ang2" aria-label="Default select example">
                                <option value=""></option>
                                    <?php
                                    while($rows=mysqli_fetch_array($res)){
@@ -193,7 +193,7 @@
                                 $res=mysqli_query($con,$sql);
                                ?>
                                
-                               <select class="form-select mb-3" aria-label="Default select example">
+                               <select class="form-select mb-3" name="dia_ang3" aria-label="Default select example">
                                <option value=""></option>
                                    <?php
                                    while($rows=mysqli_fetch_array($res)){
@@ -205,15 +205,15 @@
                                </select>
                                <h6 class="mb-4">Final Section</h6>
                                 <label for="start">Admission date:</label>
-                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="">
+                                <input class="form-control mb-3" name ="date_adm" type="date" id="start" name="trip-start" value="">
                                 <label for="start">Discharge date:</label>
-                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="">
+                                <input class="form-control mb-3" name="date_dis" type="date" id="start" name="trip-start" value="">
 
                                 </div>
                                 
                                 <div class="mb-3">
                                     <label class="form-label">Final status</label>
-                                    <select class="form-select mb-3" aria-label="Default select example">
+                                    <select class="form-select mb-3" name="final_ang" aria-label="Default select example">
                                     <option value=""></option>
                                     <option value="1">Alive</option>
                                     <option value="2">Dead</option>
@@ -223,7 +223,7 @@
  
                                 <div class="m-n2">
                                 
-                                <button class="btn btn-primary w-100 m-2" type="submit" name="ess">Save</button>
+                                <button class="btn btn-primary w-100 m-2" type="submit" name="angel">Save</button>
                             </div>
                         </div>
                     </div>
@@ -233,7 +233,7 @@
                           
                                 <div class="mb-3">
                                     <label class="form-label">Surgery status</label>
-                                    <select class="form-select mb-3" aria-label="Default select example">
+                                    <select class="form-select mb-3" name="sur_ang" aria-label="Default select example">
                                     <option value=""></option>
                                     <option value="1">Done</option>
                                     <option value="2">waiting</option>
@@ -242,11 +242,11 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                <input class="form-control mb-3" type="date" id="start" name="trip-start" value="">
+                                <input class="form-control mb-3" type="date" id="start" name="date_st" value="">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Funding Category</label>
-                                    <select class="form-select mb-3" aria-label="Default select example">
+                                    <select class="form-select mb-3"name="fund_ang" aria-label="Default select example">
                                     <option value=""></option>
                                     <option value="1">Fully</option>
                                     <option value="2">Partial</option>
@@ -255,7 +255,8 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">A.P Category</label>
-                                    <select class="form-select mb-3" aria-label="Default select example">
+                                    <select class="form-select mb-3" name="ap_ang" aria-label="Default select example">
+                                    <option value="1"></option>
                                     <option value="1">Attached</option>
                                     <option value="2">Wailist</option>
                                     <option value="3">Completed</option>
@@ -269,7 +270,7 @@
                                  $res=mysqli_query($con,$sql);
                                  ?>
                                
-                                 <select class="form-select mb-3" aria-label="Default select example">
+                                 <select class="form-select mb-3" name="ref_ang" aria-label="Default select example">
                                  <option value=""></option>
                                    <?php
                                    while($rows=mysqli_fetch_array($res)){

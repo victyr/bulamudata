@@ -76,7 +76,6 @@
     $sql1 = "INSERT INTO hcefac (district,facility) VALUES('$dise','$hcee1')";
    
     if (mysqli_query($con, $sql1)) {
-      echo "Patient added, add another?";
 
       header("Location: hcedis.php?"); 
 
@@ -87,6 +86,69 @@
     
 
     }
+    if(isset($_POST['angel'])){
+  
+      $datereg = $_POST['date_reg'];
+      $firstn= $_POST['fnam_ang'];
+      $secn = $_POST['snam_ang'];
+      $ptsex = $_POST['sex_ang'];
+      $distpt = $_POST['dist_ang'];
+      $agpt=$_POST['age_a'];
+      $agpts= $_POST['age_ang'];
+      $agepat = $agpt.$agpts;
+      $phonz = $_POST['phon_ang'];
+      $phons = $_POST['phone_ang'];
+      $d1 = $_POST['dia_ang1'];
+      $d2 = $_POST['dia_ang2'];
+      $d3 = $_POST['dia_ang3'];
+      $datdm = $_POST['date_adm'];
+      $datdis = $_POST['date_dis'];
+      $fin = $_POST['final_ang'];
+      $surang = $_POST['sur_ang'];
+      $datest=$_POST['date_st'];
+      $fund=$_POST['fund_ang'];
+      $apang=$_POST['ap_ang'];
+      $ref=$_POST['ref_ang'];
+ 
+     $datereg = mysqli_real_escape_string($con, $datereg);  
+     $firstn = mysqli_real_escape_string($con, $firstn);
+     $secn = mysqli_real_escape_string($con, $secn);  
+     $ptsex = mysqli_real_escape_string($con, $ptsex);
+     $agepat = mysqli_real_escape_string($con, $agepat); 
+     $distpt = mysqli_real_escape_string($con, $distpt); 
+     $phonz = mysqli_real_escape_string($con, $phonz);
+     $phons = mysqli_real_escape_string($con, $phons);  
+     $d1 = mysqli_real_escape_string($con, $d1);
+     $d2 = mysqli_real_escape_string($con, $d2);  
+     $d3 = mysqli_real_escape_string($con, $d3);
+     $datdm = mysqli_real_escape_string($con, $datdm);
+     $datdis = mysqli_real_escape_string($con, $datdis);
+     $fin = mysqli_real_escape_string($con, $fin);
+     $surang = mysqli_real_escape_string($con, $surang);
+     $datest = mysqli_real_escape_string($con, $datest);
+     $fund = mysqli_real_escape_string($con, $fund);
+     $apang = mysqli_real_escape_string($con, $apang);
+     $ref = mysqli_real_escape_string($con, $ref);
+ 
+ 
+      $sql = "INSERT
+                      INTO   
+                         angel (
+                           dater,fnam,snam,angs,disang,ageang,contan,contang,surst,datest,fund,apcat,reffac,diang,diange,diangel,dateadm,datedis,finalst
+                           ) 
+                           VALUES (
+                            '$datereg','$firstn','$secn','$ptsex','$distpt','$agepat','$phonz','$phons','$surang','$datest','$fund','$apang','$ref','$d1','$d2','$d3','$datdm','$datdis','$fin')";
+      if (mysqli_query($con, $sql)) {
+       echo "Patient added, add another?";
+ 
+       header("Location: formpts.php?"); 
+ 
+      } else {
+       echo "Error: " . $sql . "" . mysqli_error($con);
+      }
+      mysqli_close($con);
+     
+     }
    
 
 

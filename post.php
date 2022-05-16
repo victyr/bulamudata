@@ -139,7 +139,7 @@
                            VALUES (
                             '$datereg','$firstn','$secn','$ptsex','$distpt','$agepat','$phonz','$phons','$surang','$datest','$fund','$apang','$ref','$d1','$d2','$d3','$datdm','$datdis','$fin')";
       if (mysqli_query($con, $sql)) {
-       echo "Patient added, add another?";
+
  
        header("Location: formpts.php?"); 
  

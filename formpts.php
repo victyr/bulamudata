@@ -128,10 +128,10 @@
                                 <label for="age">Age:</label>
                                 <input for="age" type="number" style="width:50px" min="0" max="100" name="age_a" />
                                 <select for="age" name="age_ang">
-                                    <option value="1">Years</option>
-                                    <option value="2">Months</option>
-                                    <option value="3">Weeks</option>
-                                    <option value="4">Days</option>
+                                    <option value="years">Years</option>
+                                    <option value="months">Months</option>
+                                    <option value="weeks">Weeks</option>
+                                    <option value="days">Days</option>
                                     </select><br></br>
                                 <label for="phone">phone number1:</label>
                                 <input class="form-control mb-3" name="phon_ang" type="tel" id="phone" name="phone"required>
@@ -215,9 +215,9 @@
                                     <label class="form-label">Final status</label>
                                     <select class="form-select mb-3" name="final_ang" aria-label="Default select example">
                                     <option value=""></option>
-                                    <option value="1">Alive</option>
-                                    <option value="2">Dead</option>
-                                    <option value="3">Advocacy</option>
+                                    <option value="Alive">Alive</option>
+                                    <option value="Dead">Dead</option>
+                                    <option value="Advocacy">Advocacy</option>
                                     </select>
                                 </div>
  
@@ -235,10 +235,10 @@
                                     <label class="form-label">Surgery status</label>
                                     <select class="form-select mb-3" name="sur_ang" aria-label="Default select example">
                                     <option value=""></option>
-                                    <option value="1">Done</option>
-                                    <option value="2">waiting</option>
-                                    <option value="3">Not needed</option>
-                                    <option value="4">Treatment</option>
+                                    <option value="Done">Done</option>
+                                    <option value="Waiting">waiting</option>
+                                    <option value="Not needed">Not needed</option>
+                                    <option value="Treatment">Treatment</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
@@ -248,18 +248,18 @@
                                     <label class="form-label">Funding Category</label>
                                     <select class="form-select mb-3"name="fund_ang" aria-label="Default select example">
                                     <option value=""></option>
-                                    <option value="1">Fully</option>
-                                    <option value="2">Partial</option>
-                                    <option value="3">Advocacy</option>
+                                    <option value="Fully">Fully</option>
+                                    <option value="Partial">Partial</option>
+                                    <option value="Advocacy">Advocacy</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">A.P Category</label>
                                     <select class="form-select mb-3" name="ap_ang" aria-label="Default select example">
-                                    <option value="1"></option>
-                                    <option value="1">Attached</option>
-                                    <option value="2">Wailist</option>
-                                    <option value="3">Completed</option>
+                                    <option value=""></option>
+                                    <option value="Attached">Attached</option>
+                                    <option value="Waitlist">Wailist</option>
+                                    <option value="Completed">Completed</option>
                                     </select>
                                  </div>
                                  <div class="mb-3">

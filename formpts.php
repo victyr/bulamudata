@@ -55,7 +55,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Angel program</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                        <a href="angelpts.php" class="dropdown-item">add variables</a>
+                            <a href="angelpts.php" class="dropdown-item">add variables</a>
                             <a href="formpts.php" class="dropdown-item">register angel patient</a>
                             <a href="angelpts.php" class="dropdown-item">update patient</a>  
                         </div>
@@ -96,7 +96,7 @@
                 <div class="row g-4">
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Edit or add in different fields</h6>
+                            <h6 class="mb-4">Add Angel Patient</h6>
 
                             <label for="start">Registration date:</label>
                                 <input class="form-control mb-3" type="date" id="start" name="date_reg" value="">
@@ -145,7 +145,6 @@
                     <div class="col-sm-12 col-xl-6">
                         <div class="bg-light rounded h-100 p-4">
                             <h6 class="mb-4">Treatment</h6>
-                            
                                 <div class="mb-3">
                                  <label for="start">Diagnosis 1:</label>
                                     <?php

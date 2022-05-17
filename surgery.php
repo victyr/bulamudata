@@ -55,8 +55,8 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Surgery Intensive</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="surgery.php" class="dropdown-item">data entry</a>
-                            <a href="surgerypts.php" class="dropdown-item">All patients</a>  
+                        <a href="surgerypts.php" class="dropdown-item">All patients</a>  
+                        <a href="surgery.php" class="dropdown-item">Add a patient</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">

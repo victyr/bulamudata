@@ -57,6 +57,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Angel program</a>
                         <div class="dropdown-menu bg-transparent border-0">
+                            <a href="angelpts.php" class="dropdown-item">add variables</a>
                             <a href="formpts.php" class="dropdown-item">register angel patient</a>
                             <a href="angelpts.php" class="dropdown-item">update patient</a>  
                         </div>
@@ -91,59 +92,57 @@
             <!-- Navbar End -->
             
             <!-- Table Start -->
+            
             <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-12">
+            <div class="col-12">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">Responsive Table</h6>
+                            <h6 class="mb-4">Angel patients</h6>
                             <div class="table-responsive">
                                 <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First Name</th>
-                                            <th scope="col">Last Name</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Country</th>
-                                            <th scope="col">ZIP</th>
-                                            <th scope="col">Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>jhon@email.com</td>
-                                            <td>USA</td>
-                                            <td>123</td>
-                                            <td>Member</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>mark@email.com</td>
-                                            <td>UK</td>
-                                            <td>456</td>
-                                            <td>Member</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>jacob@email.com</td>
-                                            <td>AU</td>
-                                            <td>789</td>
-                                            <td>Member</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">No.</th>
+                                        <th scope="col">Surname</th>
+                                        <th scope="col">Given name</th>
+                                        <th scope="col">Sex</th>
+                                        <th scope="col">Years</th>
+                                        <th scope="col">Phone 2</th>
+                                        <th scope="col">Action</th>
+                                        
+                                    </tr>
+                                </thead>           
+                                <tbody>
+                                <?php
+                                $con = mysqli_connect("localhost", "root", "", "bulamudb");
+                                $sql="SELECT id_ang,snam,fnam,angs,ageang,contan FROM angel";
+                                $res=mysqli_query($con,$sql);
+                               ?>
+                               
+                                  
+                               
+                                   <?php
+                                     $i=1;
+                                   while($rows=mysqli_fetch_array($res)){
+                                    ?>
+
+                                     <tr>
+                                      <th scope="row"><?php echo $i++;?></th>
+                                      <td> <?php echo $rows['snam'];?></td>
+                                      <td> <?php echo $rows['fnam'];?></td>
+                                      <td> <?php echo $rows['angs'];?></td>
+                                      <td> <?php echo $rows['ageang'];?></td>
+                                      <td> <?php echo $rows['contan'];?><t/d>
+                                      <td><a class="btn btn-sm btn-primary"  href="updateang.php?id=<?php echo $rows["id_ang"]; ?>">Detail</a></td>
+                                   </tr>
+                                <?php
+                                   }
+                                   ?>
+                                   </tbody>
+                            </table>
+                          </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <!-- Table End -->
 
 

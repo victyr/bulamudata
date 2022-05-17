@@ -98,7 +98,19 @@
                             <i class="fa fa-chart-line fa-3x text-primary"></i>
                             <div class="ms-3">
                                 <p class="mb-2">Angel Program</p>
-                                <h6 class="mb-0">1234</h6>
+                                <h6 class="mb-0"> 
+                                <?php
+                                $con = mysqli_connect("localhost", "root", "", "bulamudb");
+                                $sql="SELECT count(snam) As total FROM angel";
+                                $res=mysqli_query($con,$sql);  
+                                $value =mysqli_fetch_assoc($res);   
+                                $numrows = $value['total'];                     
+                                ?>
+                                <h6 class="mb-0">
+                                   <?php
+                                   echo $numrows;
+                                   
+                                ?></h6>
                             </div>
                         </div>
                     </div>

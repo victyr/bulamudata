@@ -116,7 +116,7 @@
      $sql = "INSERT
                       INTO   
                          angel (
-                           dater,fnam,snam,angs,disang,ageang,contan,contang,diang,diange,diangel
+                           dater,snam,fnam,angs,disang,ageang,contan,contang,diang,diange,diangel
                            ) 
                            VALUES (
                             '$datereg','$firstn','$secn','$ptsex','$distpt','$agepat','$phonz','$phons','$d1','$d2','$d3')";

@@ -102,7 +102,7 @@
                                  $result = mysqli_query($con,"SELECT * FROM angel WHERE id_ang='" . $_GET['id'] . "'");
                                  $row= mysqli_fetch_array($result);
                                  ?>
-                            <table class="table">
+                            <table class="table table-borderless">
                                 <tbody>
                                     <tr>
                                         <th scope="row">Registered on</th>

@@ -321,6 +321,80 @@
                                 aria-label=".form-control-sm example">
                         </div>
                     </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Other Sections</h6>
+                          
+                                <div class="mb-3">
+                                    <label class="form-label">Surgery status</label>
+                                    <select class="form-select mb-3" name="sur_ang" aria-label="Default select example">
+                                    <option value=""></option>
+                                    <option value="Done">Done</option>
+                                    <option value="Waiting">waiting</option>
+                                    <option value="Not needed">Not needed</option>
+                                    <option value="Treatment">Treatment</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                <input class="form-control mb-3" type="date" id="start" name="date_st" value="">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Funding Category</label>
+                                    <select class="form-select mb-3"name="fund_ang" aria-label="Default select example">
+                                    <option value=""></option>
+                                    <option value="Fully">Fully</option>
+                                    <option value="Partial">Partial</option>
+                                    <option value="Advocacy">Advocacy</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">A.P Category</label>
+                                    <select class="form-select mb-3" name="ap_ang" aria-label="Default select example">
+                                    <option value=""></option>
+                                    <option value="Attached">Attached</option>
+                                    <option value="Waitlist">Wailist</option>
+                                    <option value="Completed">Completed</option>
+                                    </select>
+                                 </div>
+                                 <div class="mb-3">
+                                 <label for="start">Referral facility:</label>
+                                    <?php
+                                 $con = mysqli_connect("localhost", "root", "", "bulamudb");
+                                 $sql="SELECT fcname FROM facilities";
+                                 $res=mysqli_query($con,$sql);
+                                 ?>
+                               
+                                 <select class="form-select mb-3" name="ref_ang" aria-label="Default select example">
+                                 <option value=""></option>
+                                   <?php
+                                   while($rows=mysqli_fetch_array($res)){
+                                       ?>
+                                       <option value=""> <?php echo $rows['fcname']; ?></option>
+                                 <?php
+                                   }
+                                   ?>
+
+
+                                 </select>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <h6 class="mb-4">Final Section</h6>
+                                <label for="start">Admission date:</label>
+                                <input class="form-control mb-3" name ="date_adm" type="date" id="start" name="trip-start" value="">
+                                <label for="start">Discharge date:</label>
+                                <input class="form-control mb-3" name="date_dis" type="date" id="start" name="trip-start" value="">
+
+                                <div class="mb-3">
+                                    <label class="form-label">Final status</label>
+                                    <select class="form-select mb-3" name="final_ang" aria-label="Default select example">
+                                    <option value=""></option>
+                                    <option value="Alive">Alive</option>
+                                    <option value="Dead">Dead</option>
+                                    <option value="Advocacy">Advocacy</option>
+                                    </select>
+                                </div>
                 </div>
             </div>
             <!-- Form End -->

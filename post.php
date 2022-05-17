@@ -101,15 +101,6 @@
       $d1 = $_POST['dia_ang1'];
       $d2 = $_POST['dia_ang2'];
       $d3 = $_POST['dia_ang3'];
-      $datdm = $_POST['date_adm'];
-      $datdis = $_POST['date_dis'];
-      $fin = $_POST['final_ang'];
-      $surang = $_POST['sur_ang'];
-      $datest=$_POST['date_st'];
-      $fund=$_POST['fund_ang'];
-      $apang=$_POST['ap_ang'];
-      $ref=$_POST['ref_ang'];
- 
      $datereg = mysqli_real_escape_string($con, $datereg);  
      $firstn = mysqli_real_escape_string($con, $firstn);
      $secn = mysqli_real_escape_string($con, $secn);  
@@ -121,23 +112,14 @@
      $d1 = mysqli_real_escape_string($con, $d1);
      $d2 = mysqli_real_escape_string($con, $d2);  
      $d3 = mysqli_real_escape_string($con, $d3);
-     $datdm = mysqli_real_escape_string($con, $datdm);
-     $datdis = mysqli_real_escape_string($con, $datdis);
-     $fin = mysqli_real_escape_string($con, $fin);
-     $surang = mysqli_real_escape_string($con, $surang);
-     $datest = mysqli_real_escape_string($con, $datest);
-     $fund = mysqli_real_escape_string($con, $fund);
-     $apang = mysqli_real_escape_string($con, $apang);
-     $ref = mysqli_real_escape_string($con, $ref);
- 
- 
-      $sql = "INSERT
+
+     $sql = "INSERT
                       INTO   
                          angel (
-                           dater,fnam,snam,angs,disang,ageang,contan,contang,surst,datest,fund,apcat,reffac,diang,diange,diangel,dateadm,datedis,finalst
+                           dater,fnam,snam,angs,disang,ageang,contan,contang,diang,diange,diangel
                            ) 
                            VALUES (
-                            '$datereg','$firstn','$secn','$ptsex','$distpt','$agepat','$phonz','$phons','$surang','$datest','$fund','$apang','$ref','$d1','$d2','$d3','$datdm','$datdis','$fin')";
+                            '$datereg','$firstn','$secn','$ptsex','$distpt','$agepat','$phonz','$phons','$d1','$d2','$d3')";
       if (mysqli_query($con, $sql)) {
 
  

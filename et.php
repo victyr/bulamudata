@@ -94,7 +94,7 @@
                 <div class="row g-4">
             <div class="col-sm-12 col-xl-6">
                         <div class="bg-light rounded h-100 p-4">
-                            <h6 class="mb-4">ESS and ESS submission form</h6>
+                            <h6 class="mb-4">ET and ESS submission form</h6>
                             <form>
                             <div class="mb-3">
                                  <label for="district">District:</label>
